@@ -13,7 +13,7 @@ function playStream(idVideoTag, stream){
     const video = document.getElementById(idVideoTag);
     video.srcObject = stream;
     console.log("playing streaming");
-    // video.play();
+    video.play();
     // video.onloadedmetadata = function(e) {
     //     video.play();
     //   };
