@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat | ChatApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+        user-scalable=no">
+    <link rel="stylesheet" href="./CSS/styles.css"> 
+</head>
+
+<body class="chat" >
+
+    <!-- <div class="chat__sidebar">
+        <h3>People</h3>
+        <div id="users"></div>
+    </div> 
+
+    <div class="chat__main" >
+        <ol id="messages" class="chat__messages"></ol>
+
+        <div class="chat__footer">
+            <form id="message-form">
+                <input name="message" type="text" placeholder="Message" 
+                autofocus autocomplete="off"/>
+                <button>Send</button>
+            </form>
+        </div>
+        <div>
+            <video id="video">Video stream not available.</video>
+            <audio>Audio</audio>
+        </div>
+    </div>
+    <div id="renderer"></div>
+    <script type="text/javascript">
+        //only errors in log
+        //reference to multiple user objects
+        //get vc object
+        function onVidyoClientLoaded(status){
+            console.log("VidyoClient load state - " + status.state);
+            var vidyoConnector;
+            if(status.state === "READY"){
+                VC.CreateVidyoConnector({
+                    viewId:"renderer",
+                    viewStyle:"VIDYO_CONNECTORVIEWSTYLE_Default",
+                    remoteParticipants:2,
+                    logFileFilter:"error",
+                    logFileName:"",
+                    userData:""
+                }).then(function(vc){
+                    console.log("create success");
+                }).catch(function(error){
+                    console.error("Created failed + " + error);
+                });
+            }
+        }
+
+        //first connect to server
+        //resourceId is room name
+        //onSuccess callback
+    </script> -->
+        <header>
+            <h1>PLAYPAL</h1>
+            <h3 id="my-peer">Your id: </h3>
+        </header>
+        <main>
+            <div id="videos">
+                <!-- width="300"-->
+                <video id="localStream"  autoplay playsinline></video>
+                <br/><br/>
+                <video id="remoteStream" autoplay playsinline></video>
+                <br/><br/>
+                <input type="text" id="remoteId" class="form-field" placeholder="Remote ID">
+                <button id="btnCall">Call</button>
+            </div>
+        
+            <aside id="pdf-file">
+                <embed src="../Level-1-Book.pdf" width="650px" height="550px" />
+            </aside>
+
+        </main>
+        
+
+
+    <!-- <script src="./socket.io/socket.io.js"></script> -->
+    <script src="./js/libs/jquery-3.3.1.min.js"></script>
+    <!-- <script src="./js/libs/deparam.js"></script>  -->
+    <script src="./js/libs/peer.min.js"></script>
+    <script src="chat.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <!-- <script src="./js/libs/VidyoClient.js"></script>
+    <script src = "https://static.vidyo.io/4.1.25.30/javascript/VidyoClient/VidyoClient.js?onload=onVidyoClientLoaded"></script>
+</body>
+</html>
