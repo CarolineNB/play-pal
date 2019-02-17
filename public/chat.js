@@ -24,7 +24,7 @@ function playStream(idVideoTag, stream){
 
 //const peer = new Peer({key: 'lwjd5qra8257b9'});
 //443 is https
-const peer = new Peer({key: 'peerjs'}, host:'playpal-app.herokuapp.com', secure: true, port: 443);
+const peer = new Peer({key: 'peerjs', host:'playpal-app.herokuapp.com', secure: true, port: 443});
 
 //when connected to server, have id
 peer.on('open', id=> $('#my-peer').append(id));
